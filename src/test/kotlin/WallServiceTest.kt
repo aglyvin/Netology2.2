@@ -45,7 +45,7 @@ class WallServiceTest {
         val testPost = getTestPost()
         wallService.add(testPost.copy())
         wallService.add(testPost.copy())
-        val res = wallService.update(testPost.copy(id = 2))
+        val res = wallService.update(testPost.copy(id = 10))
         assertEquals(true, res)
     }
 
