@@ -49,4 +49,13 @@ class WallServiceTest {
         assertEquals(true, res)
     }
 
+    @Test
+    fun update_ifDoesntExist() {
+        val testPost = getTestPost()
+        wallService.add(testPost.copy())
+        wallService.add(testPost.copy())
+        val res = wallService.update(testPost.copy(id = 10))
+        assertEquals(false, res)
+    }
+
 }
